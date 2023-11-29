@@ -16,15 +16,14 @@ count=0
 for label in lines:
 	if label.strip() in allLabels:
 		count+=1
-	else:
-		if count<nbLines:
-			print("Wrong label line:"+str(count+1))
-			break
+	elif count<nbLines:
+		print(f"Wrong label line:{str(count + 1)}")
+		break
 if count<nbLines:
 	print("Labels Check : fail!")
-	input()
 else:
 	print("Labels Check : Successfull!")
-	input()
+
+input()
 
 
